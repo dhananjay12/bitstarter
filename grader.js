@@ -82,7 +82,6 @@ if(require.main == module) {
         .option('-u, --url <url>','Url')  
         .parse(process.argv);
     if(program.url){
-      var htmldata;
       res.get(program.url).on('complete', response2console);	
     }else{
     var checkJson = checkHtmlFile(program.file, program.checks);
